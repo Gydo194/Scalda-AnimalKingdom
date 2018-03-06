@@ -29,16 +29,67 @@ public class Human extends Mammal {
 
     //default constructor (required for Egg::inseminate() to be able to build a new instance)
     public Human() {
-        super("DEFAULT NAME", "DEFAULT COLOR", 0); //create something with no information; set it later
+        super("DEFAULT HUMAN NAME", "DEFAULT COLOR", 0); //create something with no information; set it later
+        this.maxNumberOfEggs = 2;
     }
 
     public Human(String name, String color, double weight) {
         super(name, color, weight);
     }
 
+    public boolean isUsesBirthControl() {
+        return usesBirthControl;
+    }
+
+    public void setUsesBirthControl(boolean usesBirthControl) {
+        this.usesBirthControl = usesBirthControl;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getInsertion() {
+        return insertion;
+    }
+
+    public void setInsertion(String insertion) {
+        this.insertion = insertion;
+    }
+
+    public Human getPartner() {
+        return partner;
+    }
+
+    public void setPartner(Human partner) {
+        this.partner = partner;
+    }
+
+    public int getStdChance() {
+        return stdChance;
+    }
+
+    public void setStdChance(int stdChance) {
+        this.stdChance = stdChance;
+    }
+
+    public int getCaughtChance() {
+        return caughtChance;
+    }
+
+    public void setCaughtChance(int caughtChance) {
+        this.caughtChance = caughtChance;
+    }
+    
+    
+
     @Override
     public String communicate() {
-        return "hello";
+        return "Human::communicate(): hello";
     }
 
     @Override
@@ -99,15 +150,13 @@ public class Human extends Mammal {
     public void makeLove(Human partner) {
         if (partner == null) {
             //making love to itself
-            System.out.printf("Human '%s' making love to itself", name);
+            makeLove();
             return;
         }
 
         if (partner.equals(this.partner)) {
             //fine
-            System.out.printf("Human '%s' making love with either itself or its partner\n", name);
-            //System.out.println(isMarried() ? "Human is married" : "Human isnt married");
-            System.out.println(partner == this.partner ? "partner equals" : "partner not equals");
+            marriageLove();
         } else {
             //STD chance
             //chance of getting caught
@@ -115,6 +164,7 @@ public class Human extends Mammal {
 
         }
 
+        //if neither of two uses birth control then propagate else continue
         if (!usesBirthControl() && !partner.usesBirthControl()) {
             propagate(partner);
 
@@ -123,9 +173,7 @@ public class Human extends Mammal {
     }
 
     private void marriageLove() {
-        if (!isMarried()) {
-            System.out.printf("Human '%s' cannot make marriage love because it isn't married.\n", name);
-        }
+
     }
 
     private void adulteryLove(Human lover) {

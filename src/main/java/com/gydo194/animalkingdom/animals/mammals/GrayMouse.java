@@ -14,6 +14,7 @@ public class GrayMouse extends Mouse {
 
     public GrayMouse() {
         super("DEFAULT GRAY MOUSE NAME","gray");
+        this.maxNumberOfEggs = 1;
     }
     
     

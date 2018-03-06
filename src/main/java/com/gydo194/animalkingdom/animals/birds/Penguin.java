@@ -16,6 +16,7 @@ public class Penguin extends Bird {
 
     public Penguin() {
         super("DEFAULT PENGUIN NAME", "DEFAULT PENGUIN COLOR", 4);
+        this.maxNumberOfEggs = 5;
     }
 
     

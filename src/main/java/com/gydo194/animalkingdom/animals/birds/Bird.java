@@ -25,7 +25,7 @@ public abstract class Bird extends Animal implements IBird, IEggLayer {
    public String move() { return "flap flap A bird flies"; }
    
    @Override
-   public String fly() { System.out.println("Flying like a "+this.getClass().getSimpleName());return "";}
+   public String fly() { return "Flying like a "+this.getClass().getSimpleName(); }
    
    @Override
    public ArrayList<Egg> layEggs() {

@@ -16,6 +16,7 @@ public class AsianElephant extends Elephant {
 
     public AsianElephant() {
         super("DEFAULT ASIAN ELEPHANT NAME",600);
+        this.maxNumberOfEggs = 2;
     }
 
     public AsianElephant(String name) {

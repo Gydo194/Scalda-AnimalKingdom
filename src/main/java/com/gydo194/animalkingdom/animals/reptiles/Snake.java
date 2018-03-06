@@ -16,6 +16,7 @@ public class Snake extends Reptile {
     
      public Snake() {
         super("DEFAULT SNAKE NAME", "green", 2.5);
+        this.maxNumberOfEggs = 7;
     }
     
     public Snake(String name) {

@@ -13,9 +13,11 @@ public class WhiteMouse extends Mouse {
 
     public WhiteMouse() {
         super("DEFAULT WHITE MOUSE NAME","white");
+        this.maxNumberOfEggs = 1;
     }
     
     public WhiteMouse(String name) {
         super(name, "white");
+        this.maxNumberOfEggs = 2;
     }
 }

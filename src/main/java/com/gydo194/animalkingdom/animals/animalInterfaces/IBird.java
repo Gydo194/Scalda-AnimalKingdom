@@ -13,7 +13,6 @@ import java.util.ArrayList;
  * @author gydo194
  */
 public interface IBird extends IEggLayer  {
-    
     public String fly();
     public void hatchEggs(ArrayList<Egg> layedEggs);
     

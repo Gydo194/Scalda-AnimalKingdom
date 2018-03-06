@@ -22,6 +22,7 @@ public class Platypus extends Animal implements IBird, IMammal, IReptile { //?
     
     public Platypus() {
         super("DEFAULT PLATYPUS NAME","DEFAULT PLATYPUS BODYCOVERING (some kind of skin?)","DEFAULT PLATYPUS COLOR (brown)",0.25);
+        this.maxNumberOfEggs = 5;
     }
     
     public Platypus(String name) {

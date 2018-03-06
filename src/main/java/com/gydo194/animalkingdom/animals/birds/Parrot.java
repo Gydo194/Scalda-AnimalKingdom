@@ -17,6 +17,7 @@ public class Parrot extends Bird {
     
     public Parrot() {
         super("DEFAULT PARROT NAME", "DEFALT PARROT COLOR", 0.5);
+        this.maxNumberOfEggs = 2;
     }
  
     public Parrot(String name, String color) {

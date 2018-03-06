@@ -16,6 +16,7 @@ public class Crocodile extends Reptile {
 
     public Crocodile() {
         super("DEFAULT CROCODILE NAME", "DEFAULT CROCODILE COLOR", 200);
+        this.maxNumberOfEggs = 7;
     }
 
     public Crocodile(String name) {

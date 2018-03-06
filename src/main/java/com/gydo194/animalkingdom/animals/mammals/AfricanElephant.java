@@ -16,6 +16,7 @@ public class AfricanElephant extends Elephant {
     
     public AfricanElephant() {
         super("DEFAULT AFRICAN ELEPHANT NAME",50); //literally no idea what ear size it is, what unit is it even!
+        this.maxNumberOfEggs = 2;
         
     }
     
